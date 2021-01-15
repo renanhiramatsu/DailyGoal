@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0C5D0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="#A36ED8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topContainerTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="40dp"
+        android:background="#FFF"
+        app:layout_constraintTop_toBottomOf="@+id/topContainer"
+        tools:layout_editor_absoluteX="172dp" />
+
+    <TextView
+        android:id="@+id/quoteStatic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="@string/quote_of_the_day"
+        android:textColor="#5F515F"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/topContainerTwo"
+        app:layout_constraintStart_toStartOf="@+id/topContainerTwo"
+        app:layout_constraintTop_toBottomOf="@+id/topContainer" />
+
+    <Button
+        android:id="@+id/button_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickStart"
+        android:text="@string/start"
+        android:textColor="#CC60CC"
+        app:backgroundTint="#EFCFF2"
+        app:iconTint="#B7BEC3"
+        app:layout_constraintBottom_toBottomOf="@+id/topContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.869" />
+
+    <Button
+        android:id="@+id/button_Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:onClick="clickReset"
+        android:text="@string/reset"
+        android:textColor="#CC60CC"
+        app:backgroundTint="#EFCFF2"
+        app:layout_constraintBottom_toBottomOf="@+id/topContainer"
+        app:layout_constraintStart_toEndOf="@+id/button_Start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.869" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="48dp"
+        android:background="#CABBCB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topContainerTwo" />
+
+    <TextView
+        android:id="@+id/quote_of_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="If you really want to do something, you'll find a way. If you don't, you'll find and excuse."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topContainerTwo" />
+
+    <TextView
+        android:id="@+id/countDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="10:00"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topContainer" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/timer"
+        app:layout_constraintStart_toStartOf="@+id/topContainer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
